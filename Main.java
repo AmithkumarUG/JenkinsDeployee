@@ -42,11 +42,17 @@ public class Main {
         strMap.entrySet().stream().forEach(System.out::println);
 
 
-        System.out.println("2nd largest number of Array");
+        System.out.println("--------2nd largest number of Array---------");
 
         int[] arr = {91, 20, 10,4,100, 204, 33, 98};
 
         Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).skip(1).
                 findFirst().ifPresent(System.out::println);
+
+
+        System.out.println("----------Adding new Class------------");
+        Employee emp = new Employee();
+
+        emp.display();
     }
 }
