@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -43,5 +40,13 @@ public class Main {
                 collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         strMap.entrySet().stream().forEach(System.out::println);
+
+
+        System.out.println("2nd largest number of Array");
+
+        int[] arr = {91, 20, 10,4,100, 204, 33, 98};
+
+        Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).skip(1).
+                findFirst().ifPresent(System.out::println);
     }
 }
